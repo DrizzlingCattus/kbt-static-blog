@@ -20,6 +20,10 @@ export default function Layout({ children }: Props) {
       <main>{children}</main>
       <style jsx>
         {`
+	  @CHARSET "UTF-8";
+	  @import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+	  body, table, div, p, span { font-family: 'Nanum Barun Gothic'; }
+
           .root {
             display: block;
             padding: 4rem 0;
