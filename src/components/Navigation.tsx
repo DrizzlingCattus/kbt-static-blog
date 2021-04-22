@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import Burger from "./Burger";
 import { useState } from "react";
+import theme from "../styles/theme";
 
 export default function Navigation() {
   const router = useRouter();
@@ -43,7 +44,7 @@ export default function Navigation() {
               padding: 0;
               position: fixed;
               top: 0;
-              background-color: #fff;
+              background-color: ${theme.colors.background};
               display: flex;
               flex-direction: column;
               justify-content: center;
@@ -64,7 +65,7 @@ export default function Navigation() {
               margin-bottom: 0;
             }
             .active {
-              color: #222;
+              color: ${theme.colors.activeText};
             }
 
             @media (min-width: 769px) {

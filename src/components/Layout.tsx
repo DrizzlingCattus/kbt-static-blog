@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Navigation from "./Navigation";
+import globalStyles from "../styles/global";
+import theme from "../styles/theme";
 
 type Props = {
   children: React.ReactNode;
@@ -12,19 +14,18 @@ export default function Layout({ children }: Props) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="apple-touch-icon" href="/icon.png" />
-        <meta name="theme-color" content="#fff" />
+        <meta name="theme-color" content={theme.colors.background} />
       </Head>
       <nav>
         <Navigation />
       </nav>
       <main>{children}</main>
+      <style jsx global>
+        {globalStyles}
+      </style>
       <style jsx>
         {`
-	  @CHARSET "UTF-8";
-	  @import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
-	  body, table, div, p, span { font-family: 'Nanum Barun Gothic'; }
-
-          .root {
+	        .root {
             display: block;
             padding: 4rem 0;
             box-sizing: border-box;

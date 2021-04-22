@@ -3,6 +3,7 @@ import { PostContent } from "../lib/posts";
 import { TagContent } from "../lib/tags";
 import PostItem from "./PostItem";
 import Pagination from "./Pagination";
+import theme from "../styles/theme";
 
 type Props = {
   posts: PostContent[];
@@ -51,11 +52,11 @@ export default function TagPostList({ posts, tag, pagination }: Props) {
             padding: 0;
             font-weight: 100;
             font-size: 1.75rem;
-            color: #9b9b9b;
+            color: ${theme.colors.inactiveText};
           }
           h1 span {
             font-weight: bold;
-            color: #222;
+            color: ${theme.colors.activeText};
           }
           ul {
             margin: 0;

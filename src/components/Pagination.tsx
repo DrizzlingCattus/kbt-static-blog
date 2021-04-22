@@ -1,5 +1,6 @@
 import { generatePagination } from "../lib/pagination";
 import Link from "next/link";
+import theme from "../styles/theme";
 
 type Props = {
   current: number;
@@ -33,11 +34,11 @@ export default function Pagination({ current, pages, link }: Props) {
         li {
           display: inline-block;
           margin-right: 1em;
-          color: #9b9b9b;
+          color: ${theme.colors.inactiveText};
           font-size: 1.25rem;
         }
         a.active {
-          color: #222;
+          color: ${theme.colors.activeText};
           font-weight: bold;
         }
       `}</style>

@@ -1,4 +1,5 @@
 import { format, formatISO } from "date-fns";
+import theme from "../styles/theme";
 
 type Props = {
   date: Date;
@@ -10,7 +11,7 @@ export default function Date({ date }: Props) {
       <style jsx>
         {`
           span {
-            color: #9b9b9b;
+            color: ${theme.colors.subtext};
           }
         `}
       </style>

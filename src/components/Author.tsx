@@ -1,4 +1,5 @@
 import { AuthorContent } from "../lib/authors";
+import theme from "../styles/theme";
 
 type Props = {
   author: AuthorContent;
@@ -10,7 +11,7 @@ export default function Author({ author }: Props) {
       <style jsx>
         {`
           span {
-            color: #9b9b9b;
+            color: ${theme.colors.subtext};
           }
         `}
       </style>

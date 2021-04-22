@@ -2,6 +2,7 @@ import { PostContent } from "../lib/posts";
 import Date from "./Date";
 import Link from "next/link";
 import { parseISO } from "date-fns";
+import theme from "../styles/theme";
 
 type Props = {
   post: PostContent;
@@ -15,7 +16,7 @@ export default function PostItem({ post }: Props) {
         <style jsx>
           {`
             a {
-              color: #222;
+              color: ${theme.colors.text};
               display: inline-block;
             }
             h2 {
